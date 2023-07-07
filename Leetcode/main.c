@@ -13,18 +13,7 @@ char words;
 
 
   int main(){
-      int a;
-      int b;
-      int r;
 
-      printf("Entre com o primeiro valor: ");
-      scanf("%d", &a);
-      printf("Entre com o segundo valor: ");
-      scanf("%d", &b);
-
-      r = a + b;
-
-      printf("Resultado da soma: %d\n", r);
 
 
 
