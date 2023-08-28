@@ -1,0 +1,65 @@
+Dr. Memory version 2.5.0 build 0 built on Oct 18 2021 03:10:43
+Windows version: WinVer=105;Rel=2009;Build=19045;Edition=Core
+Dr. Memory results for pid 10140: "main.exe"
+Application cmdline: ""C:\Users\laian\OneDrive\Ãrea de Trabalho\aed1\AvPratica\src\output\main.exe""
+Recorded 124 suppression(s) from default C:\Program Files (x86)\Dr. Memory\bin\suppress-default.txt
+
+Error #1: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!FindNextFileW 
+# 1 KERNELBASE.dll!FindNextFileA 
+# 2 .text                              [../../../../../src/gcc-git-10.3.0/libgcc/config/i386/cygwin.S:164]
+# 3 __mingw_glob                       [../../../../../src/gcc-git-10.3.0/libgcc/config/i386/cygwin.S:164]
+# 4 _setargv                           [c:/Users/laian/OneDrive/Área de Trabalho/aed1/AvPratica/src/main.c:60]
+# 5 .text   
+# 6 ntdll.dll!__RtlUserThreadStart
+Note: @0:00:00.320 in thread 11180
+Note: instruction: cmp    %eax $0x0000001a
+
+Error #2: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!FindNextFileW 
+# 1 KERNELBASE.dll!FindNextFileA 
+# 2 .text                              [../../../../../src/gcc-git-10.3.0/libgcc/config/i386/cygwin.S:164]
+# 3 __mingw_glob                       [../../../../../src/gcc-git-10.3.0/libgcc/config/i386/cygwin.S:164]
+# 4 _setargv                           [c:/Users/laian/OneDrive/Área de Trabalho/aed1/AvPratica/src/main.c:60]
+# 5 .text   
+# 6 ntdll.dll!__RtlUserThreadStart
+Note: @0:00:00.321 in thread 11180
+Note: instruction: data16 mov    %cx -> 0x00000234(%ebx,%eax,2)
+
+Error #3: UNINITIALIZED READ: reading register eax
+# 0 KERNELBASE.dll!FindNextFileW 
+# 1 KERNELBASE.dll!FindNextFileA 
+# 2 .text                              [../../../../../src/gcc-git-10.3.0/libgcc/config/i386/cygwin.S:164]
+# 3 __mingw_glob                       [../../../../../src/gcc-git-10.3.0/libgcc/config/i386/cygwin.S:164]
+# 4 _setargv                           [c:/Users/laian/OneDrive/Área de Trabalho/aed1/AvPratica/src/main.c:60]
+# 5 .text   
+# 6 ntdll.dll!__RtlUserThreadStart
+Note: @0:00:00.327 in thread 11180
+Note: instruction: test   %eax %eax
+
+Error #4: LEAK 12 direct bytes 0x01280f68-0x01280f74 + 36 indirect bytes
+# 0 replace_malloc               [d:\a\drmemory\drmemory\common\alloc_replace.c:2580]
+# 1 main                         [c:/Users/laian/OneDrive/Área de Trabalho/aed1/AvPratica/src/main.c:39]
+
+===========================================================================
+FINAL SUMMARY:
+
+DUPLICATE ERROR COUNTS:
+	Error #   1:      2
+	Error #   2:      2
+
+SUPPRESSIONS USED:
+
+ERRORS FOUND:
+      0 unique,     0 total unaddressable access(es)
+      3 unique,     5 total uninitialized access(es)
+      0 unique,     0 total invalid heap argument(s)
+      0 unique,     0 total GDI usage error(s)
+      0 unique,     0 total handle leak(s)
+      0 unique,     0 total warning(s)
+      1 unique,     1 total,     48 byte(s) of leak(s)
+      0 unique,     0 total,      0 byte(s) of possible leak(s)
+ERRORS IGNORED:
+      7 unique,     7 total,   4538 byte(s) of still-reachable allocation(s)
+         (re-run with "-show_reachable" for details)
+Details: C:\Users\laian\AppData\Roaming\Dr. Memory\DrMemory-main.exe.10140.000\results.txt
