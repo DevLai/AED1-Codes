@@ -22,8 +22,8 @@ int* topKFrequent(int* nums, int numsSize, int k, int* returnSize) {
 
     // struct de hashtable que vai contar a frequência dos valores
     struct hashtable hash[numsSize];
-    memset(hash, 0, sizeof(struct hashtable) * numsSize); // eu tentei fazer essa parte com sizeof,
-    //mas não estava conseguindo e o código sempre retornava erro, então pesquisei uma outra alternativa e descobri o memset
+    memset(hash, 0, sizeof(struct hashtable) * numsSize); /* eu tentei fazer essa parte com sizeof,
+    mas não estava conseguindo e o código sempre retornava erro, então pesquisei uma outra alternativa e descobri o memset*/
 
     int i;
     int count = 1;
